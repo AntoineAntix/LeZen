@@ -8,32 +8,29 @@ import com.esiea.tp4A.domain.Position;
 
 public class Rover implements MarsRover{
     
-   public  Position RoverPosition; 
-   public  Direction RoverDirection;
+   public Position roverPosition;
+   public Direction roverDirection;
 
 
-    //Constructeur
- public Rover(Position position, Direction direction){
-   
-    this.RoverPosition=position;
-    this.RoverDirection=direction;
- }
-   
-  
+   //Constructeur
+   public Rover(){
+      roverPosition = Position.of(0, 0, Direction.NORTH);
+      roverDirection = roverPosition.getDirection();
+   }
 
-  //Gestion du charactère entré au clavier
-private void GetInputChar(char command){
-   
-   switch(command) {
+//Gestion du charactère entré au clavier
+private void GetInputChar(char commande){
+   switch(commande) {
       case 'f': //va tout droit
+         break;
       case 'b': //recule
+         break;
       case 'l': //va a gauche
+         break;
       case 'r': //va a droite
+         break;
   }
 }
  
-
-
-
 
 }

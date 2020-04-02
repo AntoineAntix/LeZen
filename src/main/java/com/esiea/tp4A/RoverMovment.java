@@ -1,21 +1,56 @@
 package com.esiea.tp4A;
 
-import com.esiea.tp4A.domain.Position;
-import com.esiea.tp4A.domain.Direction;
+import com.esiea.tp4A.domain.*;
 
 //Mouvements du Rover
+public class RoverMovment implements MarsRover{
 
-public class RoverMovment implements Position{
-
-    public  Position position; 
-    public  Direction direction;
+    public int x; 
+    public int y;
+    public Direction direction;
 
 //Constructeur
-RoverMovement(Position position, Direction direction){
+    public RoverMovment(int x, int y, Direction direction) {
+        this.x=x;
+        this.y=y;
+        this.direction=direction;  
+    }
 
-    
-}
 //Gérer les 4 mouvements 
+    public void Avancer(){
+        switch (direction){
+            case NORTH: break;
+            case SOUTH: break;
+            case WEST: break;
+            case EAST: break;
+        }
+    }
 
+    public void Reculer(){
+        switch (direction){
+            case NORTH: break;
+            case SOUTH: break;
+            case WEST: break;
+            case EAST: break;
+        }
+    }
+
+    public void PivoterG(){
+        switch (direction){
+            case NORTH: break;
+            case SOUTH: break;
+            case WEST: break;
+            case EAST: break;
+        }
+    }
+
+    public void PivoterD(){
+        switch (direction){
+            case NORTH: break;
+            case SOUTH: break;
+            case WEST: break;
+            case EAST: break;
+        }
+    }
 
 }
