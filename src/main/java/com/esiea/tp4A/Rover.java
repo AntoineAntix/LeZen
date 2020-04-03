@@ -1,33 +1,39 @@
 package com.esiea.tp4A;
 
-import com.esiea.tp4A.domain.Direction;
 import com.esiea.tp4A.domain.MarsRover;
-import com.esiea.tp4A.domain.Position;
 
 // implémentation du déplacement
-
 public class Rover implements MarsRover{
     
-   public Position roverPosition;
-   public Direction roverDirection;
-
+   public final RoverMovment rMvt;
+   public final Mars mars;
 
    //Constructeur
-   public Rover(){
-      roverPosition = Position.of(0, 0, Direction.NORTH);
-      roverDirection = roverPosition.getDirection();
+   public Rover(RoverMovment rMvt, Mars mars){
+      this.rMvt=rMvt;
+      this.mars=mars;
+   }
+
+   //Effectue chaque commande du tableau de commandes
+   public RoverMovment move(char[] commande){
+      if(commande!=null){
+         for(int i=0; i < commande.length; i++){
+            getInputChar(commande[i]);
+         }
+      }
+      return rMvt;
    }
 
 //Gestion du charactère entré au clavier
-private void GetInputChar(char commande){
+private void getInputChar(char commande){
    switch(commande) {
-      case 'f': //va tout droit
+      case 'f': rMvt.Avancer(); //avance
          break;
-      case 'b': //recule
+      case 'b': rMvt.Reculer(); //recule
          break;
-      case 'l': //va a gauche
+      case 'l': rMvt.PivoterG(); //pivote a gauche
          break;
-      case 'r': //va a droite
+      case 'r': rMvt.PivoterD(); //pivote a droite
          break;
   }
 }
