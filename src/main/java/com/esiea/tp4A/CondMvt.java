@@ -13,23 +13,23 @@ public class CondMvt {
         this.mars=mars;
     }
 
-    //si il n'a pas atteint le maximum de la map sur l'axe X sa coordonnée x est incrémentée
+    //si il n'a pas atteint le maximum de la map sur l'axe X et si il n'y a pas d'obstacle face à lui sa coordonnée x est incrémentée
     public void CondAvancerX(){
-        if(x < mars.maxX) x=x+1;
+        if((x < mars.maxX) && (mars.detectionObstacles(x+1,y) == false)) x=x+1;
     }
 
-    //si il n'a pas atteint le maximum de la map sur l'axe Y sa coordonnée y est incrémentée
+    //si il n'a pas atteint le maximum de la map sur l'axe Y et si il n'y a pas d'obstacle face à lui sa coordonnée y est incrémentée
     public void CondAvancerY(){
-        if(y < mars.maxY) y=y+1;
+        if((y < mars.maxY) && (mars.detectionObstacles(x,y+1) == false)) y=y+1;
     }
 
-    //si il n'a pas atteint le minimum de la map sur l'axe X sa coordonnée x est décrémentée
+    //si il n'a pas atteint le minimum de la map sur l'axe X et si il n'y a pas d'obstacle derrière lui sa coordonnée x est décrémentée
     public void CondReculerX(){
-        if(x > mars.minX) x=x-1;
+        if((x > mars.minX) && (mars.detectionObstacles(x-1,y) == false)) x=x-1;
     }
 
-    //si il n'a pas atteint le minimum de la map sur l'axe Y sa coordonnée y est décrémentée
+    //si il n'a pas atteint le minimum de la map sur l'axe Y et si il n'y a pas d'obstacle derrière lui sa coordonnée y est décrémentée
     public void CondReculerY(){
-        if(y > mars.minY) y=y-1;
+        if((y > mars.minY) && (mars.detectionObstacles(x,y-1) == false)) y=y-1;
     }
 }

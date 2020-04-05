@@ -24,7 +24,7 @@ public class Mars implements PlanetMap {
         this.minY = -50;
         this.genererObstacles();
     }
-
+    //générer 15 obstacles avec des x et y aléatoires
     public void genererObstacles(){
         for(int i=0; i<15; i++) {
 			int randomIntP = random.nextInt(2);
@@ -38,6 +38,12 @@ public class Mars implements PlanetMap {
         Position obstacle = new Position.FixedPosition(tabX[i], tabY[i], Direction.NORTH);
         positionObstacles.add(obstacle);
         }
+    }
+    //check si il y a des obstacles aux x et y entrés en paramètres
+    public boolean detectionObstacles(int x, int y) {
+        boolean answer = positionObstacles.stream().anyMatch(obstacle
+         -> obstacle.getX() == x && obstacle.getY() == y);
+        return answer;
     }
 
     public Set<Position> obstaclePositions() {
