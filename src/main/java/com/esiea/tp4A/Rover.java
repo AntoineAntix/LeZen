@@ -7,11 +7,13 @@ public class Rover implements MarsRover{
     
    public final RoverMovment rMvt;
    public final Mars mars;
+   public final Laser laser;
 
    //Constructeur
-   public Rover(RoverMovment rMvt, Mars mars){
+   public Rover(RoverMovment rMvt, Mars mars, Laser laser){
       this.rMvt=rMvt;
       this.mars=mars;
+      this.laser=laser;
    }
 
    //Effectue chaque commande du tableau de commandes
@@ -27,13 +29,15 @@ public class Rover implements MarsRover{
 //Gestion du charactère entré au clavier
 private void getInputChar(char commande){
    switch(commande) {
-      case 'f': rMvt.Avancer(); //avance
+      case 'f': rMvt.avancer(); //avance
          break;
-      case 'b': rMvt.Reculer(); //recule
+      case 'b': rMvt.reculer(); //recule
          break;
-      case 'l': rMvt.PivoterG(); //pivote a gauche
+      case 'l': rMvt.pivoterG(); //pivote a gauche
          break;
-      case 'r': rMvt.PivoterD(); //pivote a droite
+      case 'r': rMvt.pivoterD(); //pivote a droite
+         break;
+      case 's': laser.laseriser(rMvt.direction); //laser
          break;
   }
 }

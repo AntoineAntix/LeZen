@@ -46,6 +46,10 @@ public class Mars implements PlanetMap {
         return answer;
     }
 
+    public void destructionObstacle(int x, int y){
+        positionObstacles.removeIf(obstacle -> (obstacle.getX() == x && obstacle.getY() == y));
+    }
+
     public Set<Position> obstaclePositions() {
         return positionObstacles;
     }

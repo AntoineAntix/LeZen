@@ -16,25 +16,25 @@ public class RoverMovment implements MarsRover{
 
 //Gérer les 4 mouvements 
     //avancer dans la direction du rover
-    public void Avancer(){
+    public void avancer(){
         switch (direction){
-            case NORTH: mvt.CondAvancerY(); break;
-            case SOUTH: mvt.CondReculerY(); break;
-            case WEST: mvt.CondReculerX(); break;
-            case EAST: mvt.CondAvancerX(); break;
+            case NORTH: mvt.condAvancerY(); break;
+            case SOUTH: mvt.condReculerY(); break;
+            case WEST: mvt.condReculerX(); break;
+            case EAST: mvt.condAvancerX(); break;
         }
     }
     //reculer (avancer dans la direction opposée du rover)
-    public void Reculer(){
+    public void reculer(){
         switch (direction){
-            case NORTH: mvt.CondReculerY(); break;
-            case SOUTH: mvt.CondAvancerY(); break;
-            case WEST: mvt.CondAvancerX(); break;
-            case EAST: mvt.CondReculerX(); break;
+            case NORTH: mvt.condReculerY(); break;
+            case SOUTH: mvt.condAvancerY(); break;
+            case WEST: mvt.condAvancerX(); break;
+            case EAST: mvt.condReculerX(); break;
         }
     }
     //pivoter le rover vers la gauche
-    public void PivoterG(){
+    public void pivoterG(){
         switch (direction){
             case NORTH: direction=Direction.WEST; break;
             case SOUTH: direction=Direction.EAST; break;
@@ -43,7 +43,7 @@ public class RoverMovment implements MarsRover{
         }
     }
     //pivoter le rover vers la droite
-    public void PivoterD(){
+    public void pivoterD(){
         switch (direction){
             case NORTH: direction=Direction.EAST; break;
             case SOUTH: direction=Direction.WEST; break;
