@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.esiea.tp4A.MarsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.012 s <<< FAILURE! - in com.esiea.tp4A.MarsTest
+obstacles  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.esiea.tp4A.MarsTest.obstacles(MarsTest.java:14)
+

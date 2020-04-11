@@ -2,6 +2,7 @@ package com.esiea.tp4A;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
+import com.esiea.tp4A.*;
 
 public class MarsTest{
 
