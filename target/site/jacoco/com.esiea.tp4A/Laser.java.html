@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Laser.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tp-4A-2020</a> &gt; <a href="index.source.html" class="el_package">com.esiea.tp4A</a> &gt; <span class="el_source">Laser.java</span></div><h1>Laser.java</h1><pre class="source lang-java linenums">package com.esiea.tp4A;
+
+import com.esiea.tp4A.domain.Direction;
+
+public class Laser{
+    public int x;
+    public int y;
+    public final Mars mars;
+    public final int range;
+
+<span class="nc" id="L11">    public Laser(int x, int y, Mars mars, int range){</span>
+<span class="nc" id="L12">        this.x=x;</span>
+<span class="nc" id="L13">        this.y=y;</span>
+<span class="nc" id="L14">        this.mars=mars;</span>
+<span class="nc" id="L15">        this.range=range;</span>
+<span class="nc" id="L16">    }</span>
+
+    public void laseriser(Direction direction){
+<span class="nc bnc" id="L19" title="All 5 branches missed.">        switch(direction){</span>
+<span class="nc" id="L20">            case EAST: laseriserE(); break;</span>
+<span class="nc" id="L21">            case WEST: laseriserW(); break;</span>
+<span class="nc" id="L22">            case NORTH: laseriserN(); break;</span>
+<span class="nc" id="L23">            case SOUTH: laseriserS(); break;</span>
+        }
+<span class="nc" id="L25">    }</span>
+
+    public void laseriserE(){
+<span class="nc bnc" id="L28" title="All 2 branches missed.">        for(int i=1; i&lt;range+1; i++){</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">            if(mars.detectionObstacles(x+i, y)==true){</span>
+<span class="nc" id="L30">                mars.destructionObstacle(x+i, y);</span>
+            }
+        }
+<span class="nc" id="L33">    }</span>
+
+    public void laseriserW(){
+<span class="nc bnc" id="L36" title="All 2 branches missed.">        for(int i=1; i&lt;range+1; i++){</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">            if(mars.detectionObstacles(x-i, y)==true){</span>
+<span class="nc" id="L38">                mars.destructionObstacle(x-i, y);</span>
+            }
+        }
+<span class="nc" id="L41">    }</span>
+
+    public void laseriserN(){
+<span class="nc bnc" id="L44" title="All 2 branches missed.">        for(int i=1; i&lt;range+1; i++){</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">            if(mars.detectionObstacles(x, y+i)==true){</span>
+<span class="nc" id="L46">                mars.destructionObstacle(x, y+i);</span>
+            }
+        } 
+<span class="nc" id="L49">    }</span>
+
+    public void laseriserS(){
+<span class="nc bnc" id="L52" title="All 2 branches missed.">        for(int i=1; i&lt;range+1; i++){</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">            if(mars.detectionObstacles(x, y-i)==true){</span>
+<span class="nc" id="L54">                mars.destructionObstacle(x, y-i);</span>
+            }
+        } 
+<span class="nc" id="L57">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

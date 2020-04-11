@@ -1,6 +1,7 @@
 package com.esiea.tp4A;
 
 import java.util.Set;
+import java.util.HashSet;
 import java.util.Random;
 
 import com.esiea.tp4A.domain.Direction;
@@ -8,25 +9,21 @@ import com.esiea.tp4A.domain.PlanetMap;
 import com.esiea.tp4A.domain.Position;
 
 public class Mars implements PlanetMap {
-    public final int maxX;
-    public final int minX;
-    public final int maxY;
-    public final int minY;
-    public final int tabX[] = new int[15];
-    public final int tabY[] = new int[15];
-    public final Random random = new Random();
-    public Set<Position> positionObstacles;
+    public final int maxX = 50;
+    public final int minX = -50;
+    public final int maxY = 50;
+    public final int minY = -50;
+    public Set<Position> positionObstacles = new HashSet<>();
 
     public Mars() {
-        this.maxX = 50;
-        this.minX = -50;
-        this.maxY = 50;
-        this.minY = -50;
-        this.genererObstacles();
+
     }
     //générer 15 obstacles avec des x et y aléatoires
     public void genererObstacles(){
-        for(int i=0; i<15; i++) {
+        final int tabX[] = new int[150];
+        final int tabY[] = new int[150];
+        final Random random = new Random();
+        for(int i=0; i<150; i++) {
 			int randomIntP = random.nextInt(2);
 			int randomIntN = random.nextInt(2);
 			int randomInt2 = random.nextInt(51);
@@ -38,6 +35,9 @@ public class Mars implements PlanetMap {
         Position obstacle = new Position.FixedPosition(tabX[i], tabY[i], Direction.NORTH);
         positionObstacles.add(obstacle);
         }
+        //pour les tests
+        Position obstacleTest = new Position.FixedPosition(10, 10, Direction.NORTH);
+        positionObstacles.add(obstacleTest);
     }
     //check si il y a des obstacles aux x et y entrés en paramètres
     public boolean detectionObstacles(int x, int y) {
