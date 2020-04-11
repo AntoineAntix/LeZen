@@ -11,7 +11,7 @@ public class MarsTest{
     @Test
     void obstacles() {
         System.out.println("début");
-        //mars.genererObstacles();
+        mars.genererObstacles();
         //assertThat(mars.obstaclePositions().size()==15);
         System.out.println("fin");
     }
