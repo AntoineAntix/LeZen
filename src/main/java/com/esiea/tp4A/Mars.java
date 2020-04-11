@@ -8,24 +8,21 @@ import com.esiea.tp4A.domain.PlanetMap;
 import com.esiea.tp4A.domain.Position;
 
 public class Mars implements PlanetMap {
-    public final int maxX;
-    public final int minX;
-    public final int maxY;
-    public final int minY;
-    public final int tabX[] = new int[15];
-    public final int tabY[] = new int[15];
-    public final Random random = new Random();
+    public final int maxX = 50;
+    public final int minX = -50;
+    public final int maxY = 50;
+    public final int minY = -50;
     public Set<Position> positionObstacles;
 
     public Mars() {
-        this.maxX = 50;
-        this.minX = -50;
-        this.maxY = 50;
-        this.minY = -50;
-        this.genererObstacles();
+
     }
+
     //générer 15 obstacles avec des x et y aléatoires
     public void genererObstacles(){
+        int tabX[] = new int[15];
+        int tabY[] = new int[15];
+        Random random = new Random();
         for(int i=0; i<15; i++) {
 			int randomIntP = random.nextInt(2);
 			int randomIntN = random.nextInt(2);
