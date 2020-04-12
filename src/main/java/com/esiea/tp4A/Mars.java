@@ -18,7 +18,7 @@ public class Mars implements PlanetMap {
     public Mars() {
 
     }
-    //générer 15 obstacles avec des x et y aléatoires
+    //générer 150 obstacles avec des x et y aléatoires
     public void genererObstacles(){
         final int tabX[] = new int[150];
         final int tabY[] = new int[150];

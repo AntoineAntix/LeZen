@@ -6,42 +6,41 @@ import com.esiea.tp4A.domain.MarsRover;
 public class Rover implements MarsRover{
     
    public final RoverMovment rMvt;
-   //public final Mars mars;
    public final Laser laser;
 
    //Constructeur
-<span class="fc" id="L13">   public Rover(RoverMovment rMvt, /*Mars mars,*/ Laser laser){</span>
-<span class="fc" id="L14">      this.rMvt=rMvt;</span>
+<span class="fc" id="L12">   public Rover(RoverMovment rMvt, Laser laser){</span>
+<span class="fc" id="L13">      this.rMvt=rMvt;</span>
       //this.mars=mars;
-<span class="fc" id="L16">      this.laser=laser;</span>
-<span class="fc" id="L17">   }</span>
+<span class="fc" id="L15">      this.laser=laser;</span>
+<span class="fc" id="L16">   }</span>
 
    //Effectue chaque commande du tableau de commandes
    public RoverMovment move(char[] commande){
-<span class="pc bpc" id="L21" title="1 of 2 branches missed.">      if(commande!=null){</span>
-<span class="fc bfc" id="L22" title="All 2 branches covered.">         for(int i=0; i &lt; commande.length; i++){</span>
-<span class="fc" id="L23">            getInputChar(commande[i]);</span>
+<span class="pc bpc" id="L20" title="1 of 2 branches missed.">      if(commande!=null){</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">         for(int i=0; i &lt; commande.length; i++){</span>
+<span class="fc" id="L22">            getInputChar(commande[i]);</span>
          }
       }
-<span class="fc" id="L26">      return rMvt;</span>
+<span class="fc" id="L25">      return rMvt;</span>
    }
 
 //Gestion du charactère entré au clavier
 private void getInputChar(char commande){
-<span class="pc bpc" id="L31" title="2 of 6 branches missed.">   switch(commande) {</span>
-<span class="fc" id="L32">      case 'f': rMvt.avancer(); //avance</span>
-<span class="fc" id="L33">         break;</span>
-<span class="fc" id="L34">      case 'b': rMvt.reculer(); //recule</span>
-<span class="fc" id="L35">         break;</span>
-<span class="fc" id="L36">      case 'l': rMvt.pivoterG(); //pivote a gauche</span>
-<span class="fc" id="L37">         break;</span>
-<span class="fc" id="L38">      case 'r': rMvt.pivoterD(); //pivote a droite</span>
-<span class="fc" id="L39">         break;</span>
-<span class="nc" id="L40">      case 's': laser.laseriser(rMvt.direction); //laser</span>
+<span class="pc bpc" id="L30" title="2 of 6 branches missed.">   switch(commande) {</span>
+<span class="fc" id="L31">      case 'f': rMvt.avancer(); //avance</span>
+<span class="fc" id="L32">         break;</span>
+<span class="fc" id="L33">      case 'b': rMvt.reculer(); //recule</span>
+<span class="fc" id="L34">         break;</span>
+<span class="fc" id="L35">      case 'l': rMvt.pivoterG(); //pivote a gauche</span>
+<span class="fc" id="L36">         break;</span>
+<span class="fc" id="L37">      case 'r': rMvt.pivoterD(); //pivote a droite</span>
+<span class="fc" id="L38">         break;</span>
+<span class="nc" id="L39">      case 's': laser.laseriser(rMvt.direction); //laser</span>
          break;
   }
-<span class="fc" id="L43">}</span>
- 
+<span class="fc" id="L42">}</span>
+
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
