@@ -16,29 +16,33 @@ public class CondMvt {
     //si il n'a pas atteint le maximum de la map sur l'axe X et si il n'y a pas d'obstacle face à lui sa coordonnée x est incrémentée
     public void condAvancerX(){
 <span class="pc bpc" id="L18" title="2 of 4 branches missed.">        if((x &lt; mars.maxX) &amp;&amp; (mars.detectionObstacles(x+1,y) == false)) x=x+1;</span>
-<span class="fc" id="L19">    }</span>
+<span class="pc bpc" id="L19" title="3 of 4 branches missed.">        if((x == mars.maxX) &amp;&amp; (mars.detectionObstacles(mars.minX,y) == false)) x=mars.minX;</span>
+<span class="fc" id="L20">    }</span>
 
     //si il n'a pas atteint le maximum de la map sur l'axe Y et si il n'y a pas d'obstacle face à lui sa coordonnée y est incrémentée
     public void condAvancerY(){
-<span class="pc bpc" id="L23" title="2 of 4 branches missed.">        if((y &lt; mars.maxY) &amp;&amp; (mars.detectionObstacles(x,y+1) == false)) y=y+1;</span>
-<span class="fc" id="L24">    }</span>
+<span class="pc bpc" id="L24" title="2 of 4 branches missed.">        if((y &lt; mars.maxY) &amp;&amp; (mars.detectionObstacles(x,y+1) == false)) y=y+1;</span>
+<span class="pc bpc" id="L25" title="3 of 4 branches missed.">        if((y == mars.maxY) &amp;&amp; (mars.detectionObstacles(x,mars.minY) == false)) y=mars.minY;</span>
+<span class="fc" id="L26">    }</span>
 
     //si il n'a pas atteint le minimum de la map sur l'axe X et si il n'y a pas d'obstacle derrière lui sa coordonnée x est décrémentée
     public void condReculerX(){
-<span class="pc bpc" id="L28" title="2 of 4 branches missed.">        if((x &gt; mars.minX) &amp;&amp; (mars.detectionObstacles(x-1,y) == false)) x=x-1;</span>
-<span class="fc" id="L29">    }</span>
+<span class="pc bpc" id="L30" title="2 of 4 branches missed.">        if((x &gt; mars.minX) &amp;&amp; (mars.detectionObstacles(x-1,y) == false)) x=x-1;</span>
+<span class="pc bpc" id="L31" title="3 of 4 branches missed.">        if((x == mars.minX) &amp;&amp; (mars.detectionObstacles(mars.maxX,y) == false)) x=mars.maxX;</span>
+<span class="fc" id="L32">    }</span>
 
     //si il n'a pas atteint le minimum de la map sur l'axe Y et si il n'y a pas d'obstacle derrière lui sa coordonnée y est décrémentée
     public void condReculerY(){
-<span class="pc bpc" id="L33" title="2 of 4 branches missed.">        if((y &gt; mars.minY) &amp;&amp; (mars.detectionObstacles(x,y-1) == false)) y=y-1;</span>
-<span class="fc" id="L34">    }</span>
+<span class="pc bpc" id="L36" title="1 of 4 branches missed.">        if((y &gt; mars.minY) &amp;&amp; (mars.detectionObstacles(x,y-1) == false)) y=y-1;</span>
+<span class="pc bpc" id="L37" title="1 of 4 branches missed.">        if((y == mars.minY) &amp;&amp; (mars.detectionObstacles(x,mars.maxY) == false)) y=mars.maxY;</span>
+<span class="fc" id="L38">    }</span>
 
     public int getX(){
-<span class="fc" id="L37">        return x;</span>
+<span class="fc" id="L41">        return x;</span>
     }
 
     public int getY(){
-<span class="fc" id="L41">        return y;</span>
+<span class="fc" id="L45">        return y;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
