@@ -52,4 +52,7 @@ public class RoverMovment implements MarsRover{
         }
     }
 
+    public Direction gDirection(){
+        return direction;
+    }
 }

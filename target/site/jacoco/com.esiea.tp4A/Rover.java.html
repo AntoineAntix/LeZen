@@ -6,31 +6,31 @@ import com.esiea.tp4A.domain.MarsRover;
 public class Rover implements MarsRover{
     
    public final RoverMovment rMvt;
-   public final Mars mars;
+   //public final Mars mars;
    public final Laser laser;
 
    //Constructeur
-<span class="nc" id="L13">   public Rover(RoverMovment rMvt, Mars mars, Laser laser){</span>
-<span class="nc" id="L14">      this.rMvt=rMvt;</span>
-<span class="nc" id="L15">      this.mars=mars;</span>
-<span class="nc" id="L16">      this.laser=laser;</span>
-<span class="nc" id="L17">   }</span>
+<span class="fc" id="L13">   public Rover(RoverMovment rMvt, /*Mars mars,*/ Laser laser){</span>
+<span class="fc" id="L14">      this.rMvt=rMvt;</span>
+      //this.mars=mars;
+<span class="fc" id="L16">      this.laser=laser;</span>
+<span class="fc" id="L17">   }</span>
 
    //Effectue chaque commande du tableau de commandes
    public RoverMovment move(char[] commande){
-<span class="nc bnc" id="L21" title="All 2 branches missed.">      if(commande!=null){</span>
-<span class="nc bnc" id="L22" title="All 2 branches missed.">         for(int i=0; i &lt; commande.length; i++){</span>
-<span class="nc" id="L23">            getInputChar(commande[i]);</span>
+<span class="pc bpc" id="L21" title="1 of 2 branches missed.">      if(commande!=null){</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">         for(int i=0; i &lt; commande.length; i++){</span>
+<span class="fc" id="L23">            getInputChar(commande[i]);</span>
          }
       }
-<span class="nc" id="L26">      return rMvt;</span>
+<span class="fc" id="L26">      return rMvt;</span>
    }
 
 //Gestion du charactère entré au clavier
 private void getInputChar(char commande){
-<span class="nc bnc" id="L31" title="All 6 branches missed.">   switch(commande) {</span>
-<span class="nc" id="L32">      case 'f': rMvt.avancer(); //avance</span>
-<span class="nc" id="L33">         break;</span>
+<span class="pc bpc" id="L31" title="5 of 6 branches missed.">   switch(commande) {</span>
+<span class="fc" id="L32">      case 'f': rMvt.avancer(); //avance</span>
+<span class="fc" id="L33">         break;</span>
 <span class="nc" id="L34">      case 'b': rMvt.reculer(); //recule</span>
 <span class="nc" id="L35">         break;</span>
 <span class="nc" id="L36">      case 'l': rMvt.pivoterG(); //pivote a gauche</span>
@@ -40,7 +40,7 @@ private void getInputChar(char commande){
 <span class="nc" id="L40">      case 's': laser.laseriser(rMvt.direction); //laser</span>
          break;
   }
-<span class="nc" id="L43">}</span>
+<span class="fc" id="L43">}</span>
  
 
 }

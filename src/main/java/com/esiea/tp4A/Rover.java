@@ -6,13 +6,13 @@ import com.esiea.tp4A.domain.MarsRover;
 public class Rover implements MarsRover{
     
    public final RoverMovment rMvt;
-   public final Mars mars;
+   //public final Mars mars;
    public final Laser laser;
 
    //Constructeur
-   public Rover(RoverMovment rMvt, Mars mars, Laser laser){
+   public Rover(RoverMovment rMvt, /*Mars mars,*/ Laser laser){
       this.rMvt=rMvt;
-      this.mars=mars;
+      //this.mars=mars;
       this.laser=laser;
    }
 

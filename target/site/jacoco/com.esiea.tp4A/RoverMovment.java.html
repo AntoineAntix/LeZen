@@ -9,21 +9,21 @@ public class RoverMovment implements MarsRover{
     public Direction direction;
 
     //Constructeur
-<span class="nc" id="L12">    public RoverMovment(CondMvt mvt, Direction direction) {</span>
-<span class="nc" id="L13">        this.mvt=mvt;</span>
-<span class="nc" id="L14">        this.direction=direction;  </span>
-<span class="nc" id="L15">    }</span>
+<span class="fc" id="L12">    public RoverMovment(CondMvt mvt, Direction direction) {</span>
+<span class="fc" id="L13">        this.mvt=mvt;</span>
+<span class="fc" id="L14">        this.direction=direction;  </span>
+<span class="fc" id="L15">    }</span>
 
 //Gérer les 4 mouvements 
     //avancer dans la direction du rover
     public void avancer(){
-<span class="nc bnc" id="L20" title="All 5 branches missed.">        switch (direction){</span>
-<span class="nc" id="L21">            case NORTH: mvt.condAvancerY(); break;</span>
+<span class="pc bpc" id="L20" title="4 of 5 branches missed.">        switch (direction){</span>
+<span class="fc" id="L21">            case NORTH: mvt.condAvancerY(); break;</span>
 <span class="nc" id="L22">            case SOUTH: mvt.condReculerY(); break;</span>
 <span class="nc" id="L23">            case WEST: mvt.condReculerX(); break;</span>
 <span class="nc" id="L24">            case EAST: mvt.condAvancerX(); break;</span>
         }
-<span class="nc" id="L26">    }</span>
+<span class="fc" id="L26">    }</span>
     //reculer (avancer dans la direction opposée du rover)
     public void reculer(){
 <span class="nc bnc" id="L29" title="All 5 branches missed.">        switch (direction){</span>
@@ -52,5 +52,8 @@ public class RoverMovment implements MarsRover{
         }
 <span class="nc" id="L53">    }</span>
 
+    public Direction gDirection(){
+<span class="fc" id="L56">        return direction;</span>
+    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
