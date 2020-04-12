@@ -32,4 +32,12 @@ public class CondMvt {
     public void condReculerY(){
         if((y > mars.minY) && (mars.detectionObstacles(x,y-1) == false)) y=y-1;
     }
+
+    public int getX(){
+        return x;
+    }
+
+    public int getY(){
+        return y;
+    }
 }
