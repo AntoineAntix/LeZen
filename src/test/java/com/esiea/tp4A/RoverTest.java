@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import com.esiea.tp4A.domain.*;
 
 public class RoverTest {
-
     Mars mars = new Mars();
 
     @Test
@@ -37,4 +36,25 @@ public class RoverTest {
         System.out.println("Tout est OK");
     }
 
+    @Test
+    public void testMvtBis(){
+        int x = 12;
+        int y = -50;
+        Direction direction = Direction.NORTH;
+        System.out.println("------------------------------");
+        System.out.println("Test du Rover map Sphérique");
+        System.out.println("------------------------------");
+        char[] commande = {'b'};
+        Laser laser = new Laser(x,y,mars,2);
+        CondMvt condMvt = new CondMvt(x, y, mars);
+        RoverMovment rMvt = new RoverMovment(condMvt, direction);
+        Rover rover = new Rover(rMvt, laser);
+        rover.move(commande);
+        System.out.println("Vérifications de la position après commande ...");
+        System.out.println("x: "+condMvt.getX() +" y: "+condMvt.getY());
+        assertThat(condMvt.getX()).isEqualTo(12);
+        assertThat(condMvt.getY()).isEqualTo(50);
+        assertThat(rMvt.gDirection()).isEqualTo(Direction.NORTH);
+        System.out.println("Tout est OK");
+    }
 }

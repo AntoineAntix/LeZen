@@ -3,7 +3,7 @@ tp-4A-2020,com.esiea.tp4A.domain,Position,7,0,0,0,1,0,1,0,1,0
 tp-4A-2020,com.esiea.tp4A.domain,Position.FixedPosition,0,21,0,0,0,8,0,4,0,4
 tp-4A-2020,com.esiea.tp4A.domain,MarsRover,11,0,0,0,4,0,4,0,4,0
 tp-4A-2020,com.esiea.tp4A.domain,Direction,0,44,0,0,0,2,0,1,0,1
-tp-4A-2020,com.esiea.tp4A,CondMvt,0,118,8,8,0,15,8,7,0,7
+tp-4A-2020,com.esiea.tp4A,CondMvt,54,168,17,15,0,19,14,9,0,7
 tp-4A-2020,com.esiea.tp4A,Joueur,6,9,0,0,2,4,2,1,2,1
 tp-4A-2020,com.esiea.tp4A,RoverMovment,21,79,10,10,6,23,10,12,0,6
 tp-4A-2020,com.esiea.tp4A,Laser,110,46,17,4,16,12,14,4,3,3
