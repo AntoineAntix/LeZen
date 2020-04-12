@@ -15,8 +15,8 @@ public class CondMvt {
 
     //si il n'a pas atteint le maximum de la map sur l'axe X et si il n'y a pas d'obstacle face à lui sa coordonnée x est incrémentée
     public void condAvancerX(){
-<span class="nc bnc" id="L18" title="All 4 branches missed.">        if((x &lt; mars.maxX) &amp;&amp; (mars.detectionObstacles(x+1,y) == false)) x=x+1;</span>
-<span class="nc" id="L19">    }</span>
+<span class="pc bpc" id="L18" title="2 of 4 branches missed.">        if((x &lt; mars.maxX) &amp;&amp; (mars.detectionObstacles(x+1,y) == false)) x=x+1;</span>
+<span class="fc" id="L19">    }</span>
 
     //si il n'a pas atteint le maximum de la map sur l'axe Y et si il n'y a pas d'obstacle face à lui sa coordonnée y est incrémentée
     public void condAvancerY(){
@@ -25,13 +25,13 @@ public class CondMvt {
 
     //si il n'a pas atteint le minimum de la map sur l'axe X et si il n'y a pas d'obstacle derrière lui sa coordonnée x est décrémentée
     public void condReculerX(){
-<span class="nc bnc" id="L28" title="All 4 branches missed.">        if((x &gt; mars.minX) &amp;&amp; (mars.detectionObstacles(x-1,y) == false)) x=x-1;</span>
-<span class="nc" id="L29">    }</span>
+<span class="pc bpc" id="L28" title="2 of 4 branches missed.">        if((x &gt; mars.minX) &amp;&amp; (mars.detectionObstacles(x-1,y) == false)) x=x-1;</span>
+<span class="fc" id="L29">    }</span>
 
     //si il n'a pas atteint le minimum de la map sur l'axe Y et si il n'y a pas d'obstacle derrière lui sa coordonnée y est décrémentée
     public void condReculerY(){
-<span class="nc bnc" id="L33" title="All 4 branches missed.">        if((y &gt; mars.minY) &amp;&amp; (mars.detectionObstacles(x,y-1) == false)) y=y-1;</span>
-<span class="nc" id="L34">    }</span>
+<span class="pc bpc" id="L33" title="2 of 4 branches missed.">        if((y &gt; mars.minY) &amp;&amp; (mars.detectionObstacles(x,y-1) == false)) y=y-1;</span>
+<span class="fc" id="L34">    }</span>
 
     public int getX(){
 <span class="fc" id="L37">        return x;</span>

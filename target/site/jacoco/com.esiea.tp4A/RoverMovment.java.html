@@ -17,40 +17,40 @@ public class RoverMovment implements MarsRover{
 //Gérer les 4 mouvements 
     //avancer dans la direction du rover
     public void avancer(){
-<span class="pc bpc" id="L20" title="4 of 5 branches missed.">        switch (direction){</span>
+<span class="pc bpc" id="L20" title="1 of 5 branches missed.">        switch (direction){</span>
 <span class="fc" id="L21">            case NORTH: mvt.condAvancerY(); break;</span>
-<span class="nc" id="L22">            case SOUTH: mvt.condReculerY(); break;</span>
-<span class="nc" id="L23">            case WEST: mvt.condReculerX(); break;</span>
-<span class="nc" id="L24">            case EAST: mvt.condAvancerX(); break;</span>
+<span class="fc" id="L22">            case SOUTH: mvt.condReculerY(); break;</span>
+<span class="fc" id="L23">            case WEST: mvt.condReculerX(); break;</span>
+<span class="fc" id="L24">            case EAST: mvt.condAvancerX(); break;</span>
         }
 <span class="fc" id="L26">    }</span>
     //reculer (avancer dans la direction opposée du rover)
     public void reculer(){
-<span class="nc bnc" id="L29" title="All 5 branches missed.">        switch (direction){</span>
-<span class="nc" id="L30">            case NORTH: mvt.condReculerY(); break;</span>
+<span class="pc bpc" id="L29" title="3 of 5 branches missed.">        switch (direction){</span>
+<span class="fc" id="L30">            case NORTH: mvt.condReculerY(); break;</span>
 <span class="nc" id="L31">            case SOUTH: mvt.condAvancerY(); break;</span>
-<span class="nc" id="L32">            case WEST: mvt.condAvancerX(); break;</span>
+<span class="fc" id="L32">            case WEST: mvt.condAvancerX(); break;</span>
 <span class="nc" id="L33">            case EAST: mvt.condReculerX(); break;</span>
         }
-<span class="nc" id="L35">    }</span>
+<span class="fc" id="L35">    }</span>
     //pivoter le rover vers la gauche
     public void pivoterG(){
-<span class="nc bnc" id="L38" title="All 5 branches missed.">        switch (direction){</span>
-<span class="nc" id="L39">            case NORTH: direction=Direction.WEST; break;</span>
-<span class="nc" id="L40">            case SOUTH: direction=Direction.EAST; break;</span>
-<span class="nc" id="L41">            case WEST: direction=Direction.SOUTH; break;</span>
+<span class="pc bpc" id="L38" title="2 of 5 branches missed.">        switch (direction){</span>
+<span class="fc" id="L39">            case NORTH: direction=Direction.WEST; break;</span>
+<span class="fc" id="L40">            case SOUTH: direction=Direction.EAST; break;</span>
+<span class="fc" id="L41">            case WEST: direction=Direction.SOUTH; break;</span>
 <span class="nc" id="L42">            case EAST: direction=Direction.NORTH; break;</span>
         }
-<span class="nc" id="L44">    }</span>
+<span class="fc" id="L44">    }</span>
     //pivoter le rover vers la droite
     public void pivoterD(){
-<span class="nc bnc" id="L47" title="All 5 branches missed.">        switch (direction){</span>
+<span class="pc bpc" id="L47" title="4 of 5 branches missed.">        switch (direction){</span>
 <span class="nc" id="L48">            case NORTH: direction=Direction.EAST; break;</span>
 <span class="nc" id="L49">            case SOUTH: direction=Direction.WEST; break;</span>
-<span class="nc" id="L50">            case WEST: direction=Direction.NORTH; break;</span>
+<span class="fc" id="L50">            case WEST: direction=Direction.NORTH; break;</span>
 <span class="nc" id="L51">            case EAST: direction=Direction.SOUTH; break;</span>
         }
-<span class="nc" id="L53">    }</span>
+<span class="fc" id="L53">    }</span>
 
     public Direction gDirection(){
 <span class="fc" id="L56">        return direction;</span>
