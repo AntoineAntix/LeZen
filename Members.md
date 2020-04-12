@@ -6,4 +6,5 @@
 - NGUEMA Loan - nguema@et.esiea.fr - GitHub : https://github.com/Weezya
 - RAMIN Tom - tramin@et.esiea.fr - GitHub : https://github.com/tomramin
 
-https://github.com/AntoineAntix/LeZen
+Classe: 4A FSI2
+Repo: https://github.com/AntoineAntix/LeZen
