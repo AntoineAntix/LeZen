@@ -15,6 +15,9 @@ public class RoverTest {
         int x = 0;
         int y = 0;
         Direction direction = Direction.NORTH;
+        System.out.println("------------------------------");
+        System.out.println("Test du Rover");
+        System.out.println("------------------------------");
         char[] commande = {'f','l','b','r','b','l','f','l','f','l','f'};
         System.out.println("Test Rover en cours ...");
         System.out.println("Initialisation du laser à (0,0) avec portée de 2 ...");

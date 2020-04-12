@@ -16,13 +16,13 @@ public class Laser{
 <span class="fc" id="L16">    }</span>
 
     public void laseriser(Direction direction){
-<span class="nc bnc" id="L19" title="All 5 branches missed.">        switch(direction){</span>
+<span class="pc bpc" id="L19" title="4 of 5 branches missed.">        switch(direction){</span>
 <span class="nc" id="L20">            case EAST: laseriserE(); break;</span>
 <span class="nc" id="L21">            case WEST: laseriserW(); break;</span>
-<span class="nc" id="L22">            case NORTH: laseriserN(); break;</span>
+<span class="fc" id="L22">            case NORTH: laseriserN(); break;</span>
 <span class="nc" id="L23">            case SOUTH: laseriserS(); break;</span>
         }
-<span class="nc" id="L25">    }</span>
+<span class="fc" id="L25">    }</span>
 
     public void laseriserE(){
 <span class="nc bnc" id="L28" title="All 2 branches missed.">        for(int i=1; i&lt;range+1; i++){</span>
@@ -41,12 +41,12 @@ public class Laser{
 <span class="nc" id="L41">    }</span>
 
     public void laseriserN(){
-<span class="nc bnc" id="L44" title="All 2 branches missed.">        for(int i=1; i&lt;range+1; i++){</span>
-<span class="nc bnc" id="L45" title="All 2 branches missed.">            if(mars.detectionObstacles(x, y+i)==true){</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        for(int i=1; i&lt;range+1; i++){</span>
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">            if(mars.detectionObstacles(x, y+i)==true){</span>
 <span class="nc" id="L46">                mars.destructionObstacle(x, y+i);</span>
             }
         } 
-<span class="nc" id="L49">    }</span>
+<span class="fc" id="L49">    }</span>
 
     public void laseriserS(){
 <span class="nc bnc" id="L52" title="All 2 branches missed.">        for(int i=1; i&lt;range+1; i++){</span>
