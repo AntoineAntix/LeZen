@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Mars.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tp-4A-2020</a> &gt; <a href="index.source.html" class="el_package">com.esiea.tp4A</a> &gt; <span class="el_source">Mars.java</span></div><h1>Mars.java</h1><pre class="source lang-java linenums">package com.esiea.tp4A;
+
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Random;
+
+import com.esiea.tp4A.domain.Direction;
+import com.esiea.tp4A.domain.PlanetMap;
+import com.esiea.tp4A.domain.Position;
+
+public class Mars implements PlanetMap {
+<span class="fc" id="L12">    public final int maxX = 50;</span>
+<span class="fc" id="L13">    public final int minX = -50;</span>
+<span class="fc" id="L14">    public final int maxY = 50;</span>
+<span class="fc" id="L15">    public final int minY = -50;</span>
+<span class="fc" id="L16">    public Set&lt;Position&gt; positionObstacles = new HashSet&lt;&gt;();</span>
+
+<span class="fc" id="L18">    public Mars() {</span>
+
+<span class="fc" id="L20">    }</span>
+    //générer 150 obstacles avec des x et y aléatoires
+    public void genererObstacles(){
+<span class="fc" id="L23">        final int tabX[] = new int[150];</span>
+<span class="fc" id="L24">        final int tabY[] = new int[150];</span>
+<span class="fc" id="L25">        final Random random = new Random();</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">        for(int i=0; i&lt;150; i++) {</span>
+<span class="fc" id="L27">			int randomIntP = random.nextInt(2);</span>
+<span class="fc" id="L28">			int randomIntN = random.nextInt(2);</span>
+<span class="fc" id="L29">			int randomInt2 = random.nextInt(51);</span>
+<span class="fc" id="L30">			int randomInt3 = random.nextInt(51);</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">			if(randomIntP == 0) randomInt2 = -randomInt2;</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">			if(randomIntN == 0) randomInt3 = -randomInt3;</span>
+<span class="fc" id="L33">			tabX[i] = randomInt2;</span>
+<span class="fc" id="L34">			tabY[i] = randomInt3;</span>
+<span class="fc" id="L35">        Position obstacle = new Position.FixedPosition(tabX[i], tabY[i], Direction.NORTH);</span>
+<span class="fc" id="L36">        positionObstacles.add(obstacle);</span>
+        }
+        //pour les tests
+<span class="fc" id="L39">        Position obstacleTest = new Position.FixedPosition(10, 10, Direction.NORTH);</span>
+<span class="fc" id="L40">        positionObstacles.add(obstacleTest);</span>
+<span class="fc" id="L41">    }</span>
+    //check si il y a des obstacles aux x et y entrés en paramètres
+    public boolean detectionObstacles(int x, int y) {
+<span class="fc" id="L44">        boolean answer = positionObstacles.stream().anyMatch(obstacle</span>
+<span class="nc bnc" id="L45" title="All 4 branches missed.">         -&gt; obstacle.getX() == x &amp;&amp; obstacle.getY() == y);</span>
+<span class="fc" id="L46">        return answer;</span>
+    }
+
+    public void destructionObstacle(int x, int y){
+<span class="pc bnc" id="L50" title="All 4 branches missed.">        positionObstacles.removeIf(obstacle -&gt; (obstacle.getX() == x &amp;&amp; obstacle.getY() == y));</span>
+<span class="fc" id="L51">    }</span>
+
+    public Set&lt;Position&gt; obstaclePositions() {
+<span class="fc" id="L54">        return positionObstacles;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
