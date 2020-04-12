@@ -14,5 +14,9 @@ Une idée de première mise à jour serait d'ajouter des bonus aléatoires sur l
 - Tir produisant deux fois plus de dégats
 - Actions supplémentaires
 
+<p align="center">
+<img src="https://kroki.io/mermaid/svg/eNqNkE1OwzAQhfc9xdtRFkGi3YPSpj-BRgIaVlYWJh2KUZQg2_Gm4UCcg4sxsUUgu0pePD-_b2Y8Ry0_3pAnEyATaW2srEsqEEU36PKm1WitqpSRllhfo0Ms8DyyirPQGaN3Y3R2Jjpn9H6Mzj0a90AXl1Y1NWcWUzw1jvTVu3Tykt8XvuDyhMeWcGiUxatUmlBRCOIWnxxb-lgiELt-DO1rB3Ml8KBcY0fmWiDnMsFKvLU5ISdjEWF3IcM8fI2o4lb6-0v2g7-wDg1XgWG1HtTG_6Uv0mE7zaQ2wze2YS_Yy9bRUeoD8SUV2JN2_TIKcCj1IWSD7P7F-Rgqea-GyZ34Bdn-CxWTHxIDntA=" width="200" height="400">
+</p>
+
 *This documentation is written in French. 
 Please contact the contributors for more informations.*
