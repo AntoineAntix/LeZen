@@ -1,0 +1,60 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "player": {
+            "type": "object",
+            "properties": {
+                "name": { "type": "string" },
+                "status": { "type": "string", "enum": ["alive", "dead"]},
+                "position": {
+                    "type": "object",
+                    "properties": {
+                        "x": { "type": "integer" },
+                        "y": { "type": "integer" },
+                        "direction": { "type": "string", "enum": ["NORTH", "EAST", "SOUTH", "WEST"]}
+                    },
+                    "additionalProperties": false,
+                    "required": ["x", "y", "direction"]
+                },
+                "laser-range": { "type": "integer", "exclusiveMinimum": 0 }
+            },
+            "additionalProperties": false,
+            "required": ["name", "status", "position", "laser-range"]
+        },
+        "local-map": {
+            "type": "object",
+            "properties": {
+                "obstacles": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "x": { "type": "integer" },
+                            "y": { "type": "integer" }
+                        },
+                        "additionalProperties": false,
+                        "required": ["x", "y"]
+                    }
+                },
+                "players": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": { "type": "string" },
+                            "x": { "type": "integer" },
+                            "y": { "type": "integer" }
+                        },
+                        "additionalProperties": false,
+                        "required": ["name", "x", "y"]
+                    }
+                }
+            },
+            "additionalProperties": false,
+            "required": ["obstacles", "players"]
+        }
+    },
+    "additionalProperties": false,
+    "required": ["player", "local-map"]
+}
